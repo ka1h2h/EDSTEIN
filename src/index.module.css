@@ -92,8 +92,10 @@ h6 {
 
 .wrapper {
   height: 100%;
+  max-width: 400px;
   margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }

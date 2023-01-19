@@ -52,23 +52,25 @@ export const Dropdown = (props: DropdownProps) => {
   };
 
   return (
-    <div>
-      <DropdownInput
-        menuStatus={menuStatus}
-        listItems={selectedItemList}
-        setMenuStatus={setMenuStatus}
-        remove={removeItemFromWindow}
-      />
-      {menuStatus ? (
-        <DropdownWindow
-          className={classes.dropdownWindow}
-          onChange={eventListener}
-          selected={selectItemFromWindow}
-          data={dataList}
+    <div className={classes.dropdown}>
+      <div className={classes.dropdown__container}>
+        <DropdownInput
+          menuStatus={menuStatus}
+          listItems={selectedItemList}
+          setMenuStatus={setMenuStatus}
+          remove={removeItemFromWindow}
         />
-      ) : (
-        <></>
-      )}
+        {menuStatus ? (
+          <DropdownWindow
+            className={classes.dropdownWindow}
+            onChange={eventListener}
+            selected={selectItemFromWindow}
+            data={dataList}
+          />
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };

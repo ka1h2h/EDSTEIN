@@ -18,7 +18,7 @@ export const DropdownInput = (props: DropdownInputProps) => {
     }
   };
   return (
-    <div>
+    <div className={classes.dropdown__input}>
       <div
         className={
           props.menuStatus
