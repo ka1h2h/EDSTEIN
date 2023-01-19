@@ -28,7 +28,7 @@ const optionListType: OptionList[] = [
 ];
 
 export default {
-  title: "templates/Dropdown",
+  title: "organism/Dropdown",
   component: Dropdown,
   argTypes: {
     type: {

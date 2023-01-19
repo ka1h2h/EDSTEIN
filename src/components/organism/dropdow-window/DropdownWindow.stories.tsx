@@ -3,7 +3,7 @@ import { DropdownWindow } from "./DropdownWindow";
 
 type TOptionListData = Array<OptionList>;
 
-const optionListTypeWithFlags: TOptionListData = [
+const optionListTypeWithIcons: TOptionListData = [
   {
     icon: "Rus",
     title: "Русский",
@@ -29,7 +29,7 @@ const optionListTypeWithFlags: TOptionListData = [
     title: "Польский",
   },
 ];
-const optionListTypeWithoutFlags: TOptionListData = [
+const optionListTypeWithoutIcons: TOptionListData = [
   {
     title: "Русский",
   },
@@ -72,12 +72,12 @@ export type DropdownWindowProps = {
 };
 
 const Template = (args: DropdownWindowProps) => <DropdownWindow {...args} />;
-export const DropdownWindowWithFlags = Template.bind({});
-DropdownWindowWithFlags.args = {
-  data: optionListTypeWithFlags,
+export const DropdownWindowWithIcons = Template.bind({});
+DropdownWindowWithIcons.args = {
+  data: optionListTypeWithIcons,
 };
 
-export const DropdownWindowWithoutFlags = Template.bind({});
-DropdownWindowWithoutFlags.args = {
-  data: optionListTypeWithoutFlags,
+export const DropdownWindowWithoutIcons = Template.bind({});
+DropdownWindowWithoutIcons.args = {
+  data: optionListTypeWithoutIcons,
 };

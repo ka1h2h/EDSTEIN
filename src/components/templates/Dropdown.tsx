@@ -5,14 +5,39 @@ import { DropdownWindow } from "../organism/dropdow-window/DropdownWindow";
 import classes from "./dropdown.module.css";
 
 export type DropdownProps = {
-  data: OptionList[];
   onChange: (value: string[]) => void;
 };
+const optionListType: OptionList[] = [
+  {
+    icon: "Rus",
+    title: "Русский",
+  },
+  {
+    icon: "Britain",
+    title: "Английский",
+  },
+  {
+    icon: "Spain",
+    title: "Испанский",
+  },
+  {
+    icon: "Germany",
+    title: "Немецкий",
+  },
+  {
+    icon: "Italy",
+    title: "Итальянский",
+  },
+  {
+    icon: "Poland",
+    title: "Польский",
+  },
+];
 export const Dropdown = (props: DropdownProps) => {
   const [value, setValue] = useState("");
   const [menuStatus, setMenuStatus] = useState(false);
   const [selectedItemList, setSelectedItemList] = useState([]);
-  const [dataList, setDataList] = useState(props.data);
+  const [dataList, setDataList] = useState(optionListType);
   const eventListener = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
