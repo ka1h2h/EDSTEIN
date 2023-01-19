@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { DropdownInput } from "../../atoms/dropdown_input/DropdownInput";
 import { DropdownWindow } from "../dropdow-window/DropdownWindow";
 import classes from "./dropdown.module.css";
