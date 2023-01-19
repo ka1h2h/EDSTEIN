@@ -31,10 +31,14 @@ export const App = () => {
       title: "Польский",
     },
   ];
-
   return (
     <div className={classes.wrapper}>
-      <Dropdown value={optionListType} onChange={setValue} />
+      <Dropdown
+        value={optionListType}
+        onChange={setValue}
+        multiSelect={true}
+        icons={true}
+      />
     </div>
   );
 };
