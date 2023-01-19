@@ -1,0 +1,32 @@
+.checkbox {
+  width: 0px;
+  height: 0px;
+  border-radius: 6px;
+  z-index: -1;
+  border: none;
+}
+
+.checkbox::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid #c1c1c1;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkbox:checked::before {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #005ffd;
+  border: 2px solid #0049d9;
+  border-radius: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 9' width='12' height='9'%3E%3Cpath fill='white' d='M 3.93426 6.75766 L 1.58682 4.40797 C 1.22381 4.04461 0.635262 4.04461 0.272255 4.40797 C -0.0907517 4.77132 -0.0907517 5.36044 0.272255 5.72379 L 3.2703 8.72472 C 3.63699 9.09176 4.23152 9.09176 4.59821 8.72472 L 11.7277 1.58834 C 12.0908 1.22499 12.0908 0.635872 11.7277 0.272516 C 11.3647 -0.0908388 10.7762 -0.0908388 10.4132 0.272516 L 3.93426 6.75766 Z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}

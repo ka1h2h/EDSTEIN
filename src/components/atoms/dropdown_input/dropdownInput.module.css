@@ -1,0 +1,74 @@
+.dropdownInputOn__button {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1.45442 4.81225C1.06285 5.11842 0.497225 5.0492 0.19105 4.65763C-0.115124 4.26607 -0.0459015 3.70044 0.345663 3.39427L4.4423 0.190996C4.76791 -0.0636034 5.22507 -0.0636926 5.55078 0.190779L9.65074 3.39405C10.0424 3.70007 10.1119 4.26567 9.80585 4.65735C9.49983 5.04904 8.93423 5.11848 8.54255 4.81246L4.99691 2.04228L1.45442 4.81225Z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+.dropdownInputOff__button {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' transform='rotate(-180)' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1.45442 4.81225C1.06285 5.11842 0.497225 5.0492 0.19105 4.65763C-0.115124 4.26607 -0.0459015 3.70044 0.345663 3.39427L4.4423 0.190996C4.76791 -0.0636034 5.22507 -0.0636926 5.55078 0.190779L9.65074 3.39405C10.0424 3.70007 10.1119 4.26567 9.80585 4.65735C9.49983 5.04904 8.93423 5.11848 8.54255 4.81246L4.99691 2.04228L1.45442 4.81225Z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+.dropdownInput__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-left: 10px;
+}
+
+.dropdownInput__items:last-child {
+  margin-right: 0;
+}
+
+.dropdownInput__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 0px 14px 0px 12px;
+}
+
+.dropdownInput__item__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #333333;
+}
+
+.dropdownInput__cross {
+  margin-bottom: 5px;
+}
