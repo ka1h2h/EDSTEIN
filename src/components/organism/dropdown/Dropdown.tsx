@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { DropdownInput } from "../atoms/dropdown_input/DropdownInput";
-import { DropdownWindow } from "../organism/dropdow-window/DropdownWindow";
-import { OptionList } from "../organism/dropdown/Dropdown";
+import { DropdownInput } from "../../atoms/dropdown_input/DropdownInput";
+import { DropdownWindow } from "../dropdow-window/DropdownWindow";
 import classes from "./dropdown.module.css";
+
+export type OptionList = {
+  icon?: string;
+  title: string;
+  checked?: boolean;
+};
 
 export type DropdownProps = {
   value: OptionList[];

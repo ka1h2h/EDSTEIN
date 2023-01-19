@@ -1,4 +1,4 @@
-import { OptionList } from "../../molecules/OptionsList/OptionsList.stories";
+import { OptionList } from "../../organism/dropdown/Dropdown";
 import classes from "./dropdownInput.module.css";
 import { SvgCross } from "./svg";
 

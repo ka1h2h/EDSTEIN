@@ -1,9 +1,7 @@
-import { OptionList } from "../../molecules/OptionsList/OptionsList.stories";
+import { OptionList } from "../dropdown/Dropdown";
 import { DropdownWindow } from "./DropdownWindow";
 
-type TOptionListData = Array<OptionList>;
-
-const optionListTypeWithIcons: TOptionListData = [
+const optionListTypeWithIcons: OptionList[] = [
   {
     icon: "Rus",
     title: "Русский",
@@ -29,7 +27,7 @@ const optionListTypeWithIcons: TOptionListData = [
     title: "Польский",
   },
 ];
-const optionListTypeWithoutIcons: TOptionListData = [
+const optionListTypeWithoutIcons: OptionList[] = [
   {
     title: "Русский",
   },
@@ -64,7 +62,7 @@ export default {
 };
 
 export type DropdownWindowProps = {
-  data: Array<OptionList>;
+  data: OptionList[];
   onChange: object;
   className?: string;
   selected?: (item: OptionList, index: number) => void;

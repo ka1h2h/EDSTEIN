@@ -1,5 +1,4 @@
-import { OptionList } from "../molecules/OptionsList/OptionsList.stories";
-import { Dropdown, DropdownProps } from "./Dropdown";
+import { Dropdown, DropdownProps, OptionList } from "./Dropdown";
 const optionListType: OptionList[] = [
   {
     icon: "Rus",
@@ -43,5 +42,5 @@ export default {
 const Template = (args: DropdownProps) => <Dropdown {...args} />;
 export const DropdownByCountry = Template.bind({});
 DropdownByCountry.args = {
-  data: optionListType,
+  value: optionListType,
 };

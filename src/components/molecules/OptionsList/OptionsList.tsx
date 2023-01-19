@@ -1,9 +1,8 @@
 import { Title } from "../../atoms/contry/OptionsListTitle";
-import { useState } from "react";
-import { Checkbox } from "../../atoms/Button/Checkbox";
+import { Checkbox } from "../../atoms/checkbox/Checkbox";
 import { CountryFlag } from "../../atoms/flag/Flag";
 import classes from "./optionsList.module.css";
-import { OptionList } from "./OptionsList.stories";
+import { OptionList } from "../../organism/dropdown/Dropdown";
 
 export type OptionListProps = {
   data: Array<OptionList>;

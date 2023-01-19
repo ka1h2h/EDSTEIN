@@ -1,10 +1,5 @@
+import { OptionList } from "../../organism/dropdown/Dropdown";
 import { OptionListProps, OptionsList } from "./OptionsList";
-
-export type OptionList = {
-  icon?: string;
-  title: string;
-  checked?: boolean;
-};
 
 type TOptionListData = Array<OptionList>;
 
