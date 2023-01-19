@@ -6,11 +6,36 @@ import { OptionList } from "./components/molecules/OptionsList/OptionsList.stori
 
 export const App = () => {
   const [value, setValue] = useState([]);
-  console.log(value);
+  const optionListType: OptionList[] = [
+    {
+      icon: "Rus",
+      title: "Русский",
+    },
+    {
+      icon: "Britain",
+      title: "Английский",
+    },
+    {
+      icon: "Spain",
+      title: "Испанский",
+    },
+    {
+      icon: "Germany",
+      title: "Немецкий",
+    },
+    {
+      icon: "Italy",
+      title: "Итальянский",
+    },
+    {
+      icon: "Poland",
+      title: "Польский",
+    },
+  ];
 
   return (
     <div className={classes.wrapper}>
-      <Dropdown onChange={setValue} />
+      <Dropdown value={optionListType} onChange={setValue} />
     </div>
   );
 };
