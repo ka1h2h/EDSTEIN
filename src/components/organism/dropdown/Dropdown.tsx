@@ -26,9 +26,7 @@ export const Dropdown = (props: DropdownProps) => {
       return props.value;
     } else {
       props.value.reduce((acc, curr) => {
-        if (curr.icon) {
-          curr.icon = "";
-        }
+        curr.icon = "";
         return curr;
       }, props.value[0]);
       return props.value;
