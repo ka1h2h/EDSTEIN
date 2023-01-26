@@ -1,27 +1,29 @@
 import { OptionsList } from "../../molecules/OptionsList/OptionsList";
-import { useState } from "react";
 import classes from "./dropdownWindow.module.css";
-import { DropdownWindowProps } from "./DropdownWindow.stories";
 import { Input } from "../../atoms/search/input/Input.stories";
+import { OptionList } from "../dropdown/Dropdown";
+
+export type DropdownWindowProps = {
+  data: OptionList[];
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+  selected?: (item: OptionList, index: number) => void;
+  checked?: boolean;
+};
 
 export const DropdownWindow = (props: DropdownWindowProps) => {
-  const [value, setValue] = useState("");
-  const eventListener = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
   let filteredData = props.data.filter((item) => {
-    if (value === "") {
+    if (props.value === "") {
       return item;
-    } else if (item.title.toLowerCase().includes(value.toLowerCase())) {
+    } else if (item.title.toLowerCase().includes(props.value.toLowerCase())) {
       return item;
     }
   });
-
   return (
     <div className={classes.dropdownWindow__container}>
       <div className={classes.dropdownWindow__input}>
-        <Input value={value} onChange={eventListener} />
+        <Input value={props.value} onChange={props.onChange} />
       </div>
       <OptionsList
         data={filteredData}

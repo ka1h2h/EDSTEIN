@@ -24,7 +24,7 @@ export const OptionsList = (props: OptionListProps) => {
               <CountryFlag icon={item.icon} />
               <Title title={item.title} />
               <div className={classes.checkbox__container}>
-                <Checkbox checked={item.checked} />
+                <Checkbox checked={item.checked} disabled={item.disabled} />
               </div>
             </div>
           </div>

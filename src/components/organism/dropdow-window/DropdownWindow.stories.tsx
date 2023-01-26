@@ -1,5 +1,5 @@
 import { OptionList } from "../dropdown/Dropdown";
-import { DropdownWindow } from "./DropdownWindow";
+import { DropdownWindow, DropdownWindowProps } from "./DropdownWindow";
 
 const optionListTypeWithIcons: OptionList[] = [
   {
@@ -59,14 +59,6 @@ export default {
       },
     },
   },
-};
-
-export type DropdownWindowProps = {
-  data: OptionList[];
-  onChange: object;
-  className?: string;
-  selected?: (item: OptionList, index: number) => void;
-  checked?: boolean;
 };
 
 const Template = (args: DropdownWindowProps) => <DropdownWindow {...args} />;

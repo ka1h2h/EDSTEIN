@@ -7,6 +7,7 @@ export type OptionList = {
   icon?: string;
   title: string;
   checked?: boolean;
+  disabled?: boolean;
 };
 
 export type DropdownProps = {
@@ -24,11 +25,11 @@ export const Dropdown = (props: DropdownProps) => {
     if (props.icons) {
       return props.value;
     } else {
-      props.value.reduce((acc, item) => {
-        if (item.icon) {
-          item.icon = "";
+      props.value.reduce((acc, curr) => {
+        if (curr.icon) {
+          curr.icon = "";
         }
-        return item;
+        return curr;
       }, props.value[0]);
       return props.value;
     }
@@ -37,24 +38,22 @@ export const Dropdown = (props: DropdownProps) => {
     setValue(e.target.value);
   };
   const selectItemFromWindow = (list: OptionList, index: number) => {
-    const selectedItems = dataList.filter((item, id) => {
-      index === id
-        ? dataList[index].checked
-          ? (dataList[index].checked = false)
-          : (dataList[index].checked = true)
-        : item;
-    });
-    setDataList([...dataList, ...selectedItems]);
-
-    if (!props.multiSelect) {
-      const selectedItem = dataList.filter((item, id) => {
-        index === id
-          ? dataList[index].checked
+    if (props.multiSelect) {
+      dataList.filter((item, id) => {
+        return index === id
+          ? !dataList[index].checked
             ? (dataList[index].checked = true)
             : (dataList[index].checked = false)
+          : item;
+      });
+    } else {
+      dataList.filter((item, id) => {
+        return index === id
+          ? dataList[index].checked
+            ? (dataList[index].checked = false)
+            : (dataList[index].checked = true)
           : (item.checked = false);
       });
-      setDataList([...dataList, ...selectedItem]);
     }
 
     const selectedFields = dataList.filter((item) => {
@@ -70,10 +69,9 @@ export const Dropdown = (props: DropdownProps) => {
     setSelectedItemList((prevState) =>
       prevState.filter((item) => item !== prevState[index])
     );
-    const removedItems = dataList.filter((item, id) => {
+    dataList.filter((item, id) => {
       selectedItemList[index] === item ? (item.checked = false) : "";
     });
-    setDataList([...dataList, ...removedItems]);
   };
 
   return (
@@ -89,6 +87,7 @@ export const Dropdown = (props: DropdownProps) => {
           <DropdownWindow
             className={classes.dropdownWindow}
             onChange={eventListener}
+            value={value}
             selected={selectItemFromWindow}
             data={dataList}
           />
